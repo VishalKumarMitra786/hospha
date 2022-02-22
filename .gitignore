@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Hospha
+/Hospha.Api/bin/Debug/net5.0
+/Hospha.Api/obj
+/Hospha.DbModel/bin/Debug/net5.0
+/Hospha.DbModel/obj
+/Hospha.IdentityServer/bin/Debug/net5.0
+/Hospha.IdentityServer/obj
+/Hospha.Model/bin/Debug/net5.0
+/Hospha.Model/obj
+/Hospha.Service/bin/Debug/net5.0
+/Hospha.Service/obj

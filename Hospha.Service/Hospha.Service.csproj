@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityServer4" Version="4.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="5.0.14" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="5.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hospha.DbModel\Hospha.DbModel.csproj" />
+    <ProjectReference Include="..\Hospha.Model\Hospha.Model.csproj" />
+  </ItemGroup>
+
+</Project>
