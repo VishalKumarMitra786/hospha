@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Hospha.Api.Controllers
 {
     [ApiController]
-    [Authorize(Model.Constants.Roles.admin)]
+    [Authorize(Model.Constants.Policy.adminPolicy)]
     [Route("[controller]")]
     public class PingController : ControllerBase
     {

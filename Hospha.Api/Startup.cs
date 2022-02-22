@@ -35,14 +35,19 @@ namespace Hospha.Api
         {
             services.AddAuthorization(options =>
                 {
-                    options.AddPolicy(Model.Constants.Roles.admin, policy =>
+                    options.AddPolicy(Model.Constants.Policy.adminPolicy, policy =>
                     {
-                        policy.RequireClaim("role", Model.Constants.Roles.admin);
+                        policy.RequireRole(Model.Constants.Roles.admin);
                     });
 
-                    options.AddPolicy(Model.Constants.Roles.staff, policy =>
+                    options.AddPolicy(Model.Constants.Policy.staffPolicy, policy =>
                     {
-                        policy.RequireClaim("role", Model.Constants.Roles.staff);
+                        policy.RequireRole(Model.Constants.Roles.doctor, Model.Constants.Roles.staff);
+                    });
+
+                    options.AddPolicy(Model.Constants.Policy.userPolicy, policy =>
+                    {
+                        policy.RequireRole(Model.Global.roleNames);
                     });
                 });
 
@@ -51,18 +56,7 @@ namespace Hospha.Api
                     {
                         options.Authority = "https://localhost:5000";
                         options.ApiName = "hosphaapi";
-                        //options.ApiSecret = "supersecret";
                     });
-            //.AddJwtBearer("Bearer", options =>
-            //{
-            //    options.Authority = "https://localhost:5000";
-            //    options.SaveToken = true;
-            //    options.Audience = "hosphaapiclient";
-            //    options
-            //});
-
-
-
 
             services.AddControllers();
 

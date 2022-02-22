@@ -10,7 +10,14 @@ namespace Hospha.Model
             public const string admin = "Admin";
             public const string staff = "Staff";
             public const string patient = "Patient";
-            public const string Doctor = "Doctor";
+            public const string doctor = "Doctor";
+        }
+
+        public class Policy
+        {
+            public const string staffPolicy = "staffPolicy";
+            public const string adminPolicy = "adminPolicy";
+            public const string userPolicy = "userPolicy";
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Hospha.Model
         public readonly static string[] roleNames =  {
             Constants.Roles.admin,
             Constants.Roles.staff,
-            Constants.Roles.Doctor,
+            Constants.Roles.doctor,
             Constants.Roles.patient
         };
     }
